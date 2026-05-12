@@ -1,14 +1,9 @@
 <?php
-$servidor = "localhost";
-$usuario  = "root";
-$senhaDB  = "";
-$banco    = "cosmeticos_db";
+$conn = mysqli_connect("localhost", "root", "", "copa_mundo");
 
-$conexao = new mysqli($servidor, $usuario, $senhaDB, $banco);
-
-if ($conexao->connect_error) {
-    die("Erro ao conectar no banco de dados: " . $conexao->connect_error);
+if (!$conn) {
+    die("Erro na conexão: " . mysqli_connect_error());
 }
 
-$conexao->set_charset("utf8");
+mysqli_set_charset($conn, "utf8mb4");
 ?>

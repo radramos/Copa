@@ -1,0 +1,101 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Barra de filtros */
+form {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+select, input, button {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botão */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+th {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Linhas */
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Zebra (linhas alternadas) */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover */
+tr:hover {
+    background-color: #eaf4fb;
+}
+
+/* Links (Editar/Excluir) */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #777;
+}
