@@ -11,8 +11,9 @@ As alteração a serem realizadas são definidas com base no arquivo elaborado p
 - [ ] #4 Padronizar estilização e interface entre todas as telas do sistema. MARY
 - [ ] #5 Remover redundância entre colunas de data e ano no banco de dados.
 - [ ] #6 Adicionar funcionalidades úteis e informações relevantes na página Home.
-- [ ] #7 Integrar cadastro de partidas diretamente na tela de listagem. KAREN
-- [ ] #8 Padronizar opções de fases com os dados existentes no banco. KAREN
-- [ ] #9 Corrigir vulnerabilidades de SQL Injection utilizando queries preparadas. KAREN
-- [ ] #10 Reorganizar estrutura de pastas e arquivos do projeto. KAREN
+Karen:
+- [ ] #7 Integrar cadastro de partidas diretamente na tela de listagem.
+- [ ] #8 Padronizar opções de fases com os dados existentes no banco.
+- [ ] #9 Corrigir vulnerabilidades de SQL Injection utilizando queries preparadas.
+- [ ] #10 Reorganizar estrutura de pastas e arquivos do projeto.
 
