@@ -7,7 +7,7 @@ if ($_POST) {
     $sql = "INSERT INTO partidas 
     (data, selecao_1, selecao_2, gols_selecao_1, gols_selecao_2, estadio, fase, ano_copa)
     VALUES (
-        '{$_POST['data_partida']}',
+        '{$_POST['data']}',
         '{$_POST['selecao_1']}',
         '{$_POST['selecao_2']}',
         {$_POST['gols_1']},
