@@ -9,9 +9,10 @@ if (!empty($_GET['ano'])) {
     $where[] = "ano_copa = $ano";
 }
 
-if (!empty($_GET['selecao'])) {
-    $sel = mysqli_real_escape_string($conn, $_GET['selecao']);
-    $sel = mysqli_real_escape_string($conn, $_GET['selecao2']);
+$sel1 = !empty($_GET['selecao1']) ? mysqli_real_escape_string($conn, $_GET['selecao1']) : "";
+$sel2 = !empty($_GET['selecao2']) ? mysqli_real_escape_string($conn, $_GET['selecao2']) : "";
+
+if (!empty($sel1) && !empty($sel2)) {
 
     $where[] = "(
         (selecao_1 LIKE '%$sel1%' AND selecao_2 LIKE '%$sel2%')
@@ -19,9 +20,21 @@ if (!empty($_GET['selecao'])) {
         (selecao_1 LIKE '%$sel2%' AND selecao_2 LIKE '%$sel1%')
     )";
 
-     $sel1 = mysqli_real_escape_string($conn, $_GET['selecao1']);
-    $where[] = "(selecao_1 LIKE '%$sel1%' OR selecao_2 LIKE '%$sel1%')";
+} elseif (!empty($sel1)) {
 
+    $where[] = "(
+        selecao_1 LIKE '%$sel1%' 
+        OR 
+        selecao_2 LIKE '%$sel1%'
+    )";
+
+} elseif (!empty($sel2)) {
+
+    $where[] = "(
+        selecao_1 LIKE '%$sel2%' 
+        OR 
+        selecao_2 LIKE '%$sel2%'
+    )";
 }
 
 if (!empty($_GET['fase'])) {
@@ -46,7 +59,7 @@ $result = mysqli_query($conn, $sql);
     <input type="number" name="ano">
 
     Buscar por seleção:
-    <input type="text" name="selecao" placeholder="Ex: Brazil">
+    <input type="text" name="selecao1" placeholder="Ex: Brazil">
 
      <input type="text" name="selecao2" placeholder="Ex: Spain">
 

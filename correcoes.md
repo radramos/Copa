@@ -6,7 +6,7 @@ As alteração a serem realizadas são definidas com base no arquivo elaborado p
 # Lista de Problemas e Melhorias do Projeto
 
 - [X] #1 Corrigir erro de cadastro de partidas relacionado ao campo `data_partida`. 
-- [ ] #2 Permitir pesquisar mais de uma seleção simultaneamente na listagem.
+- [X] #2 Permitir pesquisar mais de uma seleção simultaneamente na listagem.
 - [X] #3 Validar campo de gols para aceitar apenas números no cadastro.
 - [ ] #4 Padronizar estilização e interface entre todas as telas do sistema. MARY
 - [ ] #5 Remover redundância entre colunas de data e ano no banco de dados.
@@ -16,4 +16,5 @@ Karen:
 - [ ] #8 Padronizar opções de fases com os dados existentes no banco.
 - [ ] #9 Corrigir vulnerabilidades de SQL Injection utilizando queries preparadas.
 - [ ] #10 Reorganizar estrutura de pastas e arquivos do projeto.
+
 
