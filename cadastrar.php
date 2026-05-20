@@ -31,10 +31,10 @@ if ($_POST) {
     Seleção 1: <input type="text" name="selecao_1" required>
     Seleção 2: <input type="text" name="selecao_2" required>
 
-    Gols 1: <input type="text" name="gols_1" required>
-    Gols 2: <input type="text" name="gols_2" required>
+    Gols 1: <input type="number" name="gols_1" required>
+    Gols 2: <input type="number" name="gols_2" required>
 
-    Estádio: <input type="text" name="estadio">
+    Estádio: <input type="text" name="estadio" required>
 
     Fase:
     <select name="fase">

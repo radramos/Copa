@@ -11,7 +11,17 @@ if (!empty($_GET['ano'])) {
 
 if (!empty($_GET['selecao'])) {
     $sel = mysqli_real_escape_string($conn, $_GET['selecao']);
-    $where[] = "(selecao_1 LIKE '%$sel%' OR selecao_2 LIKE '%$sel%')";
+    $sel = mysqli_real_escape_string($conn, $_GET['selecao2']);
+
+    $where[] = "(
+        (selecao_1 LIKE '%$sel1%' AND selecao_2 LIKE '%$sel2%')
+        OR
+        (selecao_1 LIKE '%$sel2%' AND selecao_2 LIKE '%$sel1%')
+    )";
+
+     $sel1 = mysqli_real_escape_string($conn, $_GET['selecao1']);
+    $where[] = "(selecao_1 LIKE '%$sel1%' OR selecao_2 LIKE '%$sel1%')";
+
 }
 
 if (!empty($_GET['fase'])) {
@@ -23,6 +33,7 @@ $whereSQL = "";
 if (count($where) > 0) {
     $whereSQL = "WHERE " . implode(" AND ", $where);
 }
+
 
 $sql = "SELECT * FROM partidas $whereSQL ORDER BY ano_copa DESC, data DESC";
 $result = mysqli_query($conn, $sql);
@@ -36,6 +47,8 @@ $result = mysqli_query($conn, $sql);
 
     Buscar por seleção:
     <input type="text" name="selecao" placeholder="Ex: Brazil">
+
+     <input type="text" name="selecao2" placeholder="Ex: Spain">
 
     Buscar por fase:
     <select name="fase">
