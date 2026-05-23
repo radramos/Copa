@@ -10,11 +10,9 @@ As alteração a serem realizadas são definidas com base no arquivo elaborado p
 - [X] #3 Validar campo de gols para aceitar apenas números no cadastro.
 - [ ] #4 Padronizar estilização e interface entre todas as telas do sistema. MARY
 - [ ] #5 Remover redundância entre colunas de data e ano no banco de dados.
-- [ ] #6 Adicionar funcionalidades úteis e informações relevantes na página Home.
-Karen:
-- [ ] #7 Integrar cadastro de partidas diretamente na tela de listagem.
-- [ ] #8 Padronizar opções de fases com os dados existentes no banco.
-- [ ] #9 Corrigir vulnerabilidades de SQL Injection utilizando queries preparadas.
+- [-] #6 Adicionar funcionalidades úteis e informações relevantes na página Home.
+- [x] #7 Integrar cadastro e edição de partidas diretamente na tela de listagem.
+- [x] #8 Padronizar opções de fases com os dados existentes no banco.
+- [x] #9 Corrigir vulnerabilidades de SQL Injection/XSS.
 - [ ] #10 Reorganizar estrutura de pastas e arquivos do projeto.
-
-
+- [x] #11 Melhorar a semântica e estrutura html
