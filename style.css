@@ -1,101 +1,261 @@
-/* Reset básico */
+/* =========================
+   RESET GERAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #2c3e50;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Container */
+/* =========================
+   CONTAINER
+========================= */
 .container {
-    width: 90%;
-    margin: 20px auto;
+  width: 95%;
+  max-width: 1250px;
+  margin: auto;
 }
 
-/* Título */
+/* =========================
+   TÍTULO
+========================= */
 h1 {
-    text-align: center;
-    color: #2c3e50;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 40px;
+  color: #1e3c72;
+  letter-spacing: 1px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+/* =========================
+   FORMULÁRIO
+========================= */
+.form {
+  width: fit-content;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-inline: auto;
+  background-color: #ebeef2;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Barra de filtros */
-form {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* =========================
+   INPUTS
+========================= */
+select,
+input {
+  padding: 0.7em 1em;
+  border-radius: 12px;
+  border: none;
+  border-bottom: 1px solid #d0d7de;
+  background-color: #f8fbff;
+  transition: 0.3s;
+  outline: none;
+  font-size: 15px;
+}
+section.placar span {
+  display: block;
+  padding-block: 10px;
+  margin-left: 48%;
+}
+section.info label {
+  display: inline-block;
+  text-align: end;
+  margin-top: 15px;
+  min-width: 15ch;
+  color: rgb(18, 18, 91);
+}
+.small {
+  width: 5rem;
+}
+.medium {
+  width: 10rem;
+}
+/* FOCUS */
+select:focus,
+input:focus {
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px rgba(52, 152, 219, 0.25);
 }
 
-/* Inputs */
-select, input, button {
-    padding: 8px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+/* =========================
+   BOTÃO
+========================= */
+button:not(.closeFormBtn) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  margin-left: auto;
+
+  background: linear-gradient(to right, #3498db, #1d4ed8);
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Botão */
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* HOVER BOTÃO */
+button:hover:not(.closeFormBtn) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-    background-color: #2980b9;
-}
-
-/* Tabela */
+/* =========================
+   TABELA
+========================= */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+
+  background: white;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Cabeçalho */
+/* =========================
+   CABEÇALHO
+========================= */
 th {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    text-align: center;
+  background: linear-gradient(to right, #1e40af, #2563eb);
+  color: white;
+
+  padding: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
-/* Linhas */
+/* =========================
+   CÉLULAS
+========================= */
 td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
 }
 
-/* Zebra (linhas alternadas) */
+/* =========================
+   LINHAS ALTERNADAS
+========================= */
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+  background-color: #f8fbff;
 }
 
-/* Hover */
+/* =========================
+   HOVER NAS LINHAS
+========================= */
 tr:hover {
-    background-color: #eaf4fb;
+  background-color: #e0f2fe;
+  transition: 0.3s;
 }
 
-/* Links (Editar/Excluir) */
+/* =========================
+   LINKS
+========================= */
 a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+/* HOVER LINKS */
 a:hover {
-    text-decoration: underline;
+  color: #1e3a8a;
+  text-decoration: underline;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 footer {
-    text-align: center;
-    padding: 10px;
-    color: #777;
+  margin-top: 40px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  select,
+  input,
+  button {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: none;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  background-color: #f6f6f6;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+.closeFormBtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #000000;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.2s;
+  &:hover {
+    color: #1e40af;
+  }
+}
+main > * {
+  margin-top: 1rem;
 }
