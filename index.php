@@ -104,9 +104,8 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
     <header>
-        <h1>⚽ Sistema Copa do Mundo</h1>
-        <h2>Bem-vindo ao sistema</h2>
-        <p>Gerencie partidas da Copa do Mundo.</p>
+              <h1> 🏆Sistema Copa do Mundo</h1>
+               
         <hr>
     </header>
     <main>
